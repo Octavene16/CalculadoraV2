@@ -6,25 +6,30 @@ import { Alert } from "react-native"
 
 export const BotonesOperaciones = () => {
 
-    const {resultado, setResultado, numero1, setNumero1,  numero2, setNumero2, banderaOpera, setBanderaOpera,  operacion, setOperacion, setPuntoSeted, puntoSeted} = useContext(EstadosContext)
+    const {resultado, setResultado, numero1, setNumero1,  numero2, setNumero2, banderaOpera, setBanderaOpera,  operacion, setOperacion, setPuntoSeted, puntoSeted, setCeroSeted, ceroSeted} = useContext(EstadosContext)
 
     const operacionSelector = (operacion) => {
         switch (operacion){
             case 'suma':
                 setOperacion('+')
                 setPuntoSeted(false)
+                setCeroSeted(false)
+                
                 break;
                 case 'resta':
                     setOperacion('-')
                     setPuntoSeted(false)
+                    setCeroSeted(false)
                         break;
                     case 'division':
                         setOperacion('/')
                         setPuntoSeted(false)
+                        setCeroSeted(false)
                                 break;
                         case 'multiplicacion':
                             setOperacion('*')
                             setPuntoSeted(false)
+                            setCeroSeted(false)
                                         break;
                             default: break;
         }

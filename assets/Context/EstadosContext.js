@@ -8,5 +8,6 @@ const EstadosContext = createContext({
     resultado: 0, setResultado: ()=>{},
     operacion: '', setOperacion: ()=>{},
     puntoSeted: false, setPuntoSeted: ()=>{},
+    ceroSeted: false, setCeroSeted: ()=>{},
 });
 export {EstadosContext};

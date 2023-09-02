@@ -5,18 +5,22 @@ import { EstadosContext } from "./Context/EstadosContext"
 
 
 export const BotonesInferiores = () => {
-    const {resultado, setResultado, numero1, setNumero1,  numero2, setNumero2, banderaOpera, setBanderaOpera, operacion, setOperacion, puntoSeted, setPuntoSeted} = useContext(EstadosContext)
+    const {resultado, setResultado, numero1, setNumero1,  numero2, setNumero2, banderaOpera, setBanderaOpera, operacion, setOperacion, puntoSeted, setPuntoSeted, ceroSeted, setCeroSeted} = useContext(EstadosContext)
     
   
     const handle0 = () => {
+      if (ceroSeted==false || numero1.length>2){
         if (operacion==''){
         setNumero1([... numero1, '0'])
-        
+        setCeroSeted(true)
         }
         else{
+          if (ceroSeted==false || numero2.length>2){
           setNumero2([... numero2, '0'])
-         
+         setCeroSeted(true)
+          }
         }
+      }
     }
         const handlePunto = () => {
           if(puntoSeted==false){

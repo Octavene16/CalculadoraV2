@@ -5,7 +5,7 @@ import { EstadosContext } from "./Context/EstadosContext"
 
 export const BotonesNumeros = () => {
 
-  const {resultado, setResultado, numero1, setNumero1,  numero2, setNumero2, banderaOpera, setBanderaOpera, operacion, setOperacion, puntoSeted, setPuntoSeted} = useContext(EstadosContext)
+  const {resultado, setResultado, numero1, setNumero1,  numero2, setNumero2, banderaOpera, setBanderaOpera, operacion, setOperacion, puntoSeted, setPuntoSeted, ceroSeted, setCeroSeted} = useContext(EstadosContext)
 
   const handleCE = () => {
     setBanderaOpera(false)
@@ -14,6 +14,7 @@ export const BotonesNumeros = () => {
     setNumero1([''])
     setOperacion('')
     setPuntoSeted(false)
+    setCeroSeted(false)
     
   }
 

@@ -14,6 +14,7 @@ export default function App() {
   const [resultado, setResultado] = useState('');
   const [operacion, setOperacion] = useState('');
   const [puntoSeted, setPuntoSeted] = useState(false);
+  const [ceroSeted, setCeroSeted] = useState(false);
 
 
 
@@ -21,7 +22,7 @@ export default function App() {
 
   return (
 
-     <EstadosContext.Provider value={{banderaOpera, setBanderaOpera, numero1, setNumero1,numero2, setNumero2, resultado, setResultado,  operacion, setOperacion, puntoSeted, setPuntoSeted}}>
+     <EstadosContext.Provider value={{banderaOpera, setBanderaOpera, numero1, setNumero1,numero2, setNumero2, resultado, setResultado,  operacion, setOperacion, puntoSeted, setPuntoSeted, ceroSeted, setCeroSeted}}>
     <View style={styles.container}>
        {banderaOpera==false 
         ? operacion!=''
@@ -79,14 +80,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   result: {
-    paddingTop: 15,
+    paddingTop: 8,
     textAlign: 'center',
     textAlignVertical: 'center',
     backgroundColor: 'gray',
     marginLeft: 70,
     color: 'white',
     width: Dimensions.get("window").width/1.5,
-    height: 50,
-    fontSize: 16
+    height: 60,
+    fontSize: 40
   }
 });
